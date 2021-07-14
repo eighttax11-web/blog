@@ -46,17 +46,21 @@ export class RegisterComponent implements OnInit {
           form.reset();
         
         } else {
-          this.status = 'error'
+
+          this.status = 'error';
+
+          Swal.fire({
+            title: 'Ocurrió un error, datos no válidos',
+            icon: 'error'
+          });
         }
 
       }, error => {
         
         Swal.fire({
           title: 'Ocurrió un error, inténtelo más tarde',
-          icon: 'success'
+          icon: 'error'
         });
-        
-        this.status = 'error'
       }
     );
   }

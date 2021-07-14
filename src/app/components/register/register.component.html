@@ -7,7 +7,7 @@
     </div>
 
     <div class="alert alert-danger" *ngIf="status == 'error'">
-        Ocurrió un problema al realizar el registro, inténtelo más tarde    
+        Ocurrió un error, datos no válidos    
     </div>
 
     <form class="col-md-5 ml-0 pl-0" #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
